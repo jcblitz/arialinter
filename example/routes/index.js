@@ -6,6 +6,7 @@ exports.index = function(req, res) {
 };
 
 exports.lint = function(req, res) {
+  console.log("body" + req.body.htmlContent)
   linter.initialize(req.body.htmlContent, function() {
     if (linter.evaluate()) {
       console.log('success');
@@ -18,4 +19,3 @@ exports.lint = function(req, res) {
     }
   });
 };
-

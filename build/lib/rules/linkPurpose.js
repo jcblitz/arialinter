@@ -27,7 +27,7 @@ var linkPurpose = {
 
       dom.$('a').each(function() {
         if (dom.$(this).text().length <= 4) {
-          reporter.error(that.message, 0, that.name);
+          reporter.error(that.message + ', \'' + dom.$(this).text() + '\'', 0, that.name);
           throw dom.$(this).parent().html();
         }
       });
